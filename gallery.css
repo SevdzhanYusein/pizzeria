@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFAA33;
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+nav .logo img{
+    width: 120px;
+    margin: 20px 0;
+    position: relative;
+    left: -45%;
+    cursor: pointer;
+}
+
+nav ul{
+     list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a{
+    color: #000080;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a.gallery::after{
+    content: '';
+    width: 50%;
+    height: 3px;
+    background-color: #fdee00;
+    display: flex;
+    position: relative;
+    margin-left: 18px;
+}
+
+nav ul li a:hover{
+    color: #fdee00;
+}
+
+nav .login a{
+    color: black;
+    text-decoration: none;
+    border: 2px solid #000080;
+    border-radius: 20px;
+    padding: 7px 20px;
+    transition: 0.3s;
+}
+
+nav .login a:hover{
+    background: #000080;
+    color: white;
+}
+
+.banner_bg{
+    width: 100%;
+    height: 65vh;
+    background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(pizza.webp) ;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner_bg h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    position: relative;
+    top: 50%;
+    color: #fff;
+}
+
+.banner_bg h1 span{
+    color: #facc22;
+    margin-right: 15px;
+}
+
+.gallery{
+    width: 100%;
+    padding: 35px 0 50px 0;
+}
+
+
+.gallery .gallery_box{
+    width: 95%;
+    margin: 5px auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.gallery .gallery_box .gallery_image{
+    width: 470px;
+    height: 350px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gallery .gallery_box .gallery_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.gallery .gallery_box .gallery_image:hover img{
+    transform: scale(1.1);
+}
+
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #eeeeee;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: orangered;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+footer .end span{
+    color: orange;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: orangered;
+    border-radius: 30px;
+}
+
+.anim{
+    opacity: 0;
+    transform: translateY(40px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
